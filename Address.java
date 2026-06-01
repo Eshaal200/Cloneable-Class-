@@ -1,4 +1,4 @@
-public class Address{
+public class Address implements Cloneable{
 
 
 // ----------- PARAMETERS -------------------
