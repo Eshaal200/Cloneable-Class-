@@ -101,7 +101,7 @@ public void removeClasses(String classNames) throws ClassNotFoundException{
 
 // make this toString actually look nice later
     public String toString(){
-        return firstName + lastName + address + studentID + classes;
+        return "first name: " +  firstName + "last name: " + lastName + "address: " + address + "Student ID: " +  studentID + "Students classes: " + classes;
     }
 
 
