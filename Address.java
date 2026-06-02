@@ -23,11 +23,11 @@ public Address(String add1, String add2, String city, State state, String zipCod
 // ------------------ CLONE -----------------------
  
 public Address(Address other){
-    this.add1 = add1;
-    this.add2 = add2;
-    this.city = city;
-    this.state = state;
-    this.zipCode = zipCode;
+    this.add1 = other.add1;
+    this.add2 = other.add2;
+    this.city = other.city;
+    this.state = other.state;
+    this.zipCode = other.zipCode;
 
 }
 
@@ -85,7 +85,7 @@ public void setZipCode(String zipCode){
 // --------------TOSTRING---------------
 
 
-// @Override;
+//@Override;
 public String toString(){
     return add1 + ", " + ", "+ add2 + ", " + city + ", " + state.getAbbr() + ", " + zipCode;
 }

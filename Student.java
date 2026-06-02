@@ -11,12 +11,30 @@ public class Student implements Cloneable {
    private ArrayList<String> classes = new ArrayList<>();
 
 // ------------------ CONSTRUCTOR------------------
-    public Student(String firstName, String lastName, long studentID, Address address){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.studentID = studentID;
-        this.address = address;
+    public Student(String f, String l, long ID, Address add){
+        this.firstName = f;
+        this.lastName = l;
+        this.studentID = ID;
+        this.address = add;
+       
     }
+
+    // -----------------COPY--------------------
+
+
+public Student(Student other){
+    this.firstName = other.firstName;
+    this.lastName = other.lastName;
+    this.studentID = other.studentID;
+    this.address = other.address.clone();
+    this.classes = new ArrayList<>(other.classes);
+    
+}
+
+
+
+
+
     
     // ---------------GETTERS ------------------
 
@@ -60,10 +78,31 @@ public void setAddress(){
 
 // ------------ METHODS ---------------
 
-public static void addClasses(ArrayList<String> list, String items){
+public void addClasses(String classNames){
+    classes.add(classNames);
 
 }
 
+public void removeClasses(String classNames) throws ClassNotFoundException{
+
+    if(!classes.remove(classNames)){
+        throw new ClassNotFoundException("class not found " + classNames);
+    }
+
+
+    }
+
+
+    //@Override
+
+    public Student clone(){
+        return new Student(this);
+    }
+
+// make this toString actually look nice later
+    public String toString(){
+        return firstName + lastName + address + studentID + classes;
+    }
 
 
 }
