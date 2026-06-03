@@ -108,6 +108,8 @@ public void setZipCode(String zipCode){
 // string printed in terminal 
 // formats the object into a coherent sentance.
 //@Override;
+// okay override for some reason just doesnt work here
+
 public String toString(){
     return add1 + ", " + add2 + ", " + city + ", " + state + ", " + zipCode;
 }

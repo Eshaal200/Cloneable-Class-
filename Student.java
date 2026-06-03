@@ -111,14 +111,13 @@ public void removeClasses(String classNames) throws ClassNotFoundException{
     }
 
 
-    //@Override - still dont know why the override symbol is not working
-
-
-// clone method, returns a clone of a student object
+    @Override 
+  // override works here
     public Student clone () throws CloneNotSupportedException{
         return new Student(this);
     }
 
+    @Override
 // string printed into the terminal
     public String toString(){
         return " first name: " +  firstName + " last name: " + lastName + " address: " + address + " Student ID: " +  studentID + " Students classes: " + classes;
