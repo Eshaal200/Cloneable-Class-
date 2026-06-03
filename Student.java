@@ -59,20 +59,20 @@ public Student(Student other){
 // ------------------ SETTERS ---------------------
 
 
-public void setFirstName(){
+public void setFirstName(String firstName){
     this.firstName = firstName;
 }
 
-public void setLastName(){
+public void setLastName(String lastName){
     this.lastName = lastName;
 }
 
-public void setStudentID(){
+public void setStudentID(long studentID){
     this.studentID = studentID;
 }
 
 
-public void setAddress(){
+public void setAddress(Address address){
     this.address = address;
 }
 
@@ -102,7 +102,7 @@ public void removeClasses(String classNames) throws ClassNotFoundException{
 
 // make this toString actually look nice later
     public String toString(){
-        return "first name: " +  firstName + "last name: " + lastName + "address: " + address + "Student ID: " +  studentID + "Students classes: " + classes;
+        return " first name: " +  firstName + " last name: " + lastName + " address: " + address + " Student ID: " +  studentID + " Students classes: " + classes;
     }
 
 

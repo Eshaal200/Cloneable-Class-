@@ -1,6 +1,9 @@
 public class Address implements Cloneable{
 
 
+
+
+
 // ----------- PARAMETERS -------------------
 
 private String add1;
@@ -87,7 +90,7 @@ public void setZipCode(String zipCode){
 
 //@Override;
 public String toString(){
-    return add1 + ", " + ", "+ add2 + ", " + city + ", " + state.getAbbr() + ", " + zipCode;
+    return add1 + ", " + add2 + ", " + city + ", " + state + ", " + zipCode;
 }
 
 
